@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light (default) */
+:root {
+  --bg: #ffffff;
+  --fg: #111827;      /* text primary */
+  --muted: #6b7280;   /* text secondary */
+  --surface: #f9fafb; /* cards/sections */
+  --border: #e5e7eb;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+}
+
+/* Synthwave */
+:root.synthwave {
+  --font-body: "Consolas", "Monaco", "Courier New", monospace;
+  --font-heading: "Trebuchet MS", "Segoe UI", "Verdana", sans-serif; 
+  --bg: #1E1B2E;
+  --fg: #FDF4FF;
+  --muted: #E879F9;
+  --surface: #3B2C53;
+  --surface-hover: #5A4A7A;
+  --border: #C4B5FD;
+  --accent: #FBCFE8;
+  --accent-hover: #F472B6;
+  --highlight: #BAE6FD;
+  --glow: 0 0 3px rgba(251, 207, 232, 0.25),
+            0 0 6px rgba(186, 230, 253, 0.15);
+  --glow-hover: 0 0 8px rgba(251, 191, 217, 0.35),
+                  0 0 16px rgba(186, 230, 253, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body { 
+  font-family: var(--font-body);
+  height: 100%; 
+}
+
+body { 
+  background: var(--bg); color: var(--fg); 
+}
+
+header, footer { 
+  background: var(--bg); border-color: var(--border); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.page-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.25rem;
+  /* text-transform: uppercase; */
+}
+
+a { 
+  text-decoration: none; 
+}
+
+.border { 
+  border-color: var(--border) !important; 
+}
+
+a { 
+  color: var(--accent); 
+}
+a:hover { 
+  color: var(--accent-hover); 
+}
+
+.shadow, .shadow-sm, .shadow-md { 
+  background: var(--surface); 
+}
+.shadow:hover {
+  background: var(--surface-hover);
+}
+
+.neon {
+  box-shadow: var(--glow);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+.neon:hover {
+  box-shadow: var(--glow-hover);
+}
+
+
