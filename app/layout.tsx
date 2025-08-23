@@ -1,6 +1,7 @@
 import './globals.css';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Navigation from './components/Navigation';
 
 export const metadata: Metadata = {
   title: 'Portfolio Shell',
@@ -11,20 +12,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="synthwave">
       <body className="min-h-screen antialiased flex flex-col">
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-black/80 text-white px-3 py-2 rounded">
+          Skip to content
+        </a>
         <header className="border-b">
-          <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-            <h1 className={"text-xl page-title"}>Drew Bailey</h1>
-            <div className="flex gap-6 text-sm">
-              <Link href="/">Home</Link>
-              {/* <Link href="/about">About</Link> */}
-              <Link href="/demos">Demos</Link>
-              <Link href="/contact">Contact</Link>
-            </div>
-          </nav>
+          <Navigation />
         </header>
-          <div className="flex-1">
-            {children}
-          </div>
+        <main id="main" className="flex-1">
+          {children}
+        </main>
         <footer className="border-t">
           <div className="mx-auto max-w-6xl px-6 py-10 text-sm">
             © {new Date().getFullYear()} Drew Bailey

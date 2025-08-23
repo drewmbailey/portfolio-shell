@@ -92,4 +92,13 @@ a:hover {
   box-shadow: var(--glow-hover);
 }
 
+/* Visible focus styles */
+:where(a, button, [role="button"], input, select, textarea) {
+  outline: none;
+}
+:where(a, button, [role="button"], input, select, textarea):focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+}
+
 
