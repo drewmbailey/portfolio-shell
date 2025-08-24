@@ -9,7 +9,7 @@ export default function DemoPage({ params }: { params: { slug: string } }) {
   const isIframe = demo.mode === 'iframe';
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-10">
+    <>
       <h1 className="text-2xl font-semibold mb-2">{demo.title}</h1>
       <p className="mb-4">{demo.description}</p>
       {demo?.repo && 
@@ -37,6 +37,6 @@ export default function DemoPage({ params }: { params: { slug: string } }) {
           This demo is proxied under <code>/demos/{demo.slug}</code>. Try navigating within this path.
         </p>
       )}
-    </main>
+    </>
   );
 }
