@@ -10,13 +10,13 @@ export type Demo = {
 
 export const demos: Demo[] = [
   {
-    slug: 'image-tools',
-    title: 'Image Tools',
-    description: 'Transform and optimize images via a tiny API. (Proxy mode)',
-    url: process.env.DEMO_IMAGE_TOOLS_URL || 'https://example.com',
+    slug: 'trending-movies',
+    title: 'Trending Movies',
+    description: 'React app that shows trending movies using TMDB and OMDB APIs.',
+    url: process.env.DEMO_IMAGE_TOOLS_URL || 'https://movie-app-production-06ae.up.railway.app/',
     mode: 'iframe',
-    tags: ['nextjs', 'edge', 'images'],
-    repo: "https://github.com/",
+    tags: ['React', 'API', 'Rechart'],
+    repo: "https://github.com/drewmbailey/movie-app",
   },
   {
     slug: 'ai-notes',
