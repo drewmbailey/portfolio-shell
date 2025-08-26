@@ -28,17 +28,6 @@ export default function ContactPage() {
             &nbsp;{content.contacts.links.linkedin.text}
           </a>
         </li>
-        <li>
-          <a 
-            href={content.contacts.links.github.href}
-            target="_blank" 
-            className="flex flex-row"
-            rel="noopener noreferrer"
-          >
-            <GitHubIcon />
-            &nbsp;{content.contacts.links.github.text}
-          </a>
-        </li>
       </ul>
     </>
   );

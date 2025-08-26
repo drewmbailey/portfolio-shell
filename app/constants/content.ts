@@ -8,6 +8,8 @@ export const content = {
   skipLink: "Skip to content",
   footer: {
     copyright: `\u00a9 ${new Date().getFullYear()} Drew Bailey`,
+    builtWith: "This site is a shell for hosting micro-frontend demos. It was built with <strong>Next.js</strong>, <strong>Next.js</strong>, and <strong>Tailwind</strong>.",
+    builtWithLink: "https://github.com/drewmbailey/portfolio-shell",
   },
   home: {
     title: "Drew Bailey",
