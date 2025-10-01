@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation';
 import { demos } from '@/lib/demos';
 import { GitHubIcon } from '@/app/components/icons/GitHubIcon';
+import { ArrowLeftIcon } from '@/app/components/icons/ArrowLeftIcon';
+import Link from "next/link";
+import { content } from "../../constants/content";
 
 export default function DemoPage({ params }: { params: { slug: string } }) {
   const demo = demos.find(demo => demo.slug === params.slug);
@@ -10,6 +13,12 @@ export default function DemoPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+        <Link 
+          className="mb-4 inline-flex items-center"
+          href="/demos"
+        >
+          <ArrowLeftIcon className="mr-1" /> {content.navigation.back}
+        </Link>
       <h1 className="text-2xl font-semibold mb-2">{demo.title}</h1>
       <p className="mb-4">{demo.description}</p>
       {demo?.repo && 

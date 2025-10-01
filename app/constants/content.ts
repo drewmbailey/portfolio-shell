@@ -4,6 +4,7 @@ export const content = {
     home: "Home",
     demos: "Demos",
     contact: "Contact",
+    back: "Back",
   },
   skipLink: "Skip to content",
   footer: {

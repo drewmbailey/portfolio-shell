@@ -19,12 +19,12 @@ export const demos: Demo[] = [
     repo: "https://github.com/drewmbailey/movie-app",
   },
   {
-    slug: 'ai-notes',
-    title: 'AI Notes',
-    description: 'Summarize notes, extract tasks—LLM powered. (Iframe mode)',
-    url: process.env.DEMO_AI_NOTES_URL || 'https://example.org',
+    slug: 'task-manager',
+    title: 'Task Manager',
+    description: 'Simple task manager with a react frontend and Java backend.',
+    url: process.env.DEMO_AI_NOTES_URL || 'https://task-manager-fullstack.up.railway.app/',
     mode: 'iframe',
-    tags: ['ai', 'notes'],
-    repo: "https://github.com/",
+    tags: ['React', 'Java', 'API'],
+    repo: "https://github.com/drewmbailey/task-manager-fullstack",
   }
 ];
