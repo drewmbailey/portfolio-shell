@@ -6,7 +6,7 @@ Each demo can be shown via **proxy rewrites** (best UX) or **iframe** (simplest 
 ## Quick Start
 
 ```bash
-pnpm i   # or npm i / yarn
+pnpm i
 cp .env.example .env.local
 pnpm dev
 ```

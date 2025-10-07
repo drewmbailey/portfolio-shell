@@ -26,5 +26,13 @@ export const demos: Demo[] = [
     mode: 'iframe',
     tags: ['React', 'Java', 'API'],
     repo: "https://github.com/drewmbailey/task-manager-fullstack",
+  },
+  {
+    slug: 'ui-components',
+    title: 'UI Components',
+    description: 'UI playground for interesting frontend code.',
+    url: process.env.DEMO_IMAGE_TOOLS_URL || 'https://ui-components.up.railway.app/',
+    mode: 'iframe',
+    tags: ['CSS', 'Frontend'],
   }
 ];
