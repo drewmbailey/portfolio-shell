@@ -7,7 +7,7 @@ import { content } from "../../constants/content";
 
 export default function DemoPage({ params }: { params: { slug: string } }) {
   const demo = demos.find(demo => demo.slug === params.slug);
-  if (!demo) return notFound();
+  if (!demo) notFound();
 
   const isIframe = demo.mode === 'iframe';
 
