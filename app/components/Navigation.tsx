@@ -32,6 +32,13 @@ export default function Navigation() {
         >
           {content.navigation.contact}
         </Link>
+        <Link 
+          href="/resume"
+          className={pathname === "/resume" ? "text-[var(--accent-hover)]" : undefined}
+          aria-current={pathname === "/resume" ? "page" : undefined}
+        >
+          {content.navigation.resume}
+        </Link>
       </div>
     </nav>
   );
