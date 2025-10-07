@@ -34,5 +34,6 @@ export const demos: Demo[] = [
     url: process.env.DEMO_IMAGE_TOOLS_URL || 'https://ui-components.up.railway.app/',
     mode: 'iframe',
     tags: ['CSS', 'Frontend'],
+    repo: "https://github.com/drewmbailey/ui-components",
   }
 ];
