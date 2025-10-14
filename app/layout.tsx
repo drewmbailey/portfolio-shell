@@ -6,8 +6,8 @@ import { GitHubIcon } from "./components/icons/GitHubIcon";
 import parse from 'html-react-parser';
 
 export const metadata: Metadata = {
-  title: "Portfolio Shell",
-  description: "Catalog of independent micro-demos under one roof",
+  title: "Drew M. Bailey | Software Engineer and Web Developer",
+  description: "Full-stack software engineer with 12+ years of experience in React, TypeScript, and modern web development. View my portfolio of interactive demos, projects, and professional work.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
