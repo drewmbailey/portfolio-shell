@@ -35,5 +35,14 @@ export const demos: Demo[] = [
     mode: 'iframe',
     tags: ['CSS', 'Frontend'],
     repo: "https://github.com/drewmbailey/ui-components",
-  }
+  },
+  {
+    slug: 'd3-data-visualization',
+    title: 'D3 Data Visualization',
+    description: 'Data visualization using D3.js, React, Typescript, and Tailwind.',
+    url: process.env.DEMO_IMAGE_TOOLS_URL || 'https://d3-demo.up.railway.app/',
+    mode: 'iframe',
+    tags: ['d3.js', 'React', 'Typescript'],
+    repo: "https://github.com/drewmbailey/d3-demo",
+  },
 ];
