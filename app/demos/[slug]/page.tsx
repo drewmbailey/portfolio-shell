@@ -13,7 +13,7 @@ export default async function DemoPage(
   const demo = demos.find((d) => d.slug === slug);
   if (!demo) notFound(); 
 
-  const isIframe = demo.mode === "iframe";
+  const demoMode = demo.mode;
 
   return (
     <>
@@ -36,7 +36,7 @@ export default async function DemoPage(
         </a>
       )}
 
-      {isIframe ? (
+      {demoMode === "iframe" && (
         <div className="rounded-2xl overflow-hidden border">
           <iframe
             src={demo.url}
@@ -44,11 +44,25 @@ export default async function DemoPage(
             sandbox="allow-scripts allow-forms allow-same-origin"
           />
         </div>
-      ) : (
+      )}
+
+      {demoMode === "proxy" && (
         <p className="text-sm text-gray-500">
           This demo is proxied under <code>/demos/{demo.slug}</code>. Try
           navigating within this path.
         </p>
+      )}
+
+      {demoMode === "endpoint" && (
+        <div className="rounded-2xl overflow-hidden border">
+          {demo.image ? (
+            <img src={`/images/demos/${demo.image}`} alt={demo.title} className="w-full h-auto" />
+          ) : (
+            <div className="p-8 text-center text-gray-500">
+              No preview available
+            </div>
+          )}
+        </div>
       )}
     </>
   );

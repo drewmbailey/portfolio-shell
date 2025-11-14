@@ -34,7 +34,7 @@ export default function ResumePage() {
         </div>
       </section>
 
-      <a href="/DrewBailey_Resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-block rounded-xl px-5 py-3 border text-[var(--fg)] hover:text-[var(--fg)] shadow neon mt-8">{content.resume.downloadResume}</a>
+      <a href="/files/DrewBailey_Resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-block rounded-xl px-5 py-3 border text-[var(--fg)] hover:text-[var(--fg)] shadow neon mt-8">{content.resume.downloadResume}</a>
     </main>
   );
 }

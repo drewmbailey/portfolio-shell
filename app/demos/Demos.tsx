@@ -4,7 +4,6 @@ import { isUrlAvailable } from "@/lib/helpers/isUrlAvailable";
 import { content } from "../constants/content";
 
 async function fetchHealth(slug: string) {
-  // Works for both dev and prod if NEXT_PUBLIC_BASE_URL is set
   const base = process.env.NEXT_PUBLIC_BASE_URL || "";
   const res = await fetch(`${base}/api/health/${slug}`, { cache: "no-store" });
   if (!res.ok) return { ok: false };
@@ -12,18 +11,16 @@ async function fetchHealth(slug: string) {
 }
 
 export default async function DemosPage() {
-  // Check all demos in parallel
   const statuses = await Promise.all(
     demos.map(async demo => {
-      const online = await isUrlAvailable(demo.url);
+      const online = demo.online !== undefined 
+        ? demo.online 
+        : await isUrlAvailable(demo.url);
       return { slug: demo.slug, online };
     })
   );
 
-  // Make lookup table for quick access by slug
   const statusMap = new Map(statuses.map(entry => [entry.slug, entry.online]));
-
-  const map = new Map(statuses.map(s => [s.slug, s]));
 
   return (
     <>
@@ -33,8 +30,6 @@ export default async function DemosPage() {
           const online = statusMap.get(demo.slug) ?? false;
           const statusLabel = online ? "Online" : "Offline";
 
-          const slug = map.get(demo.slug) as any;
-          const status = slug?.ok ? content.demos.cards.statusOnline : content.demos.cards.statusOffline;
           return (
             <Link key={demo.slug} href={`/demos/${demo.slug}`} className="rounded-2xl p-5 border text-[var(--fg)] hover:text-[var(--fg)] shadow neon">
               <div className="flex items-center justify-between mb-2">
